@@ -1,8 +1,8 @@
 <script>
+	import './reset.css';
 	import './styles.css';
 </script>
 
-<div id="app" />
-
-<style>
-</style>
+<main>
+	<slot />
+</main>

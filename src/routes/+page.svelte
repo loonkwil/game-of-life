@@ -1,7 +1,4 @@
 <script>
 </script>
 
-<div />
-
-<style>
-</style>
+<h1>Hello World</h1>

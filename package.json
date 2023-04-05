@@ -25,5 +25,8 @@
 		"vite": "^4.0.0",
 		"vitest": "^0.29.8"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@fontsource/nunito": "^4.5.12"
+	}
 }
