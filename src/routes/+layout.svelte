@@ -1,8 +1,8 @@
 <script>
-	import './reset.css';
-	import './styles.css';
+  import './reset.css';
+  import './styles.css';
 </script>
 
 <main>
-	<slot />
+  <slot />
 </main>
