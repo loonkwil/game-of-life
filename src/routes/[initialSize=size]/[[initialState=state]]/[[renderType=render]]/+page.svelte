@@ -58,10 +58,17 @@
   #board > * {
     border-radius: 20%;
     background: var(--live-cell-color);
+    transition: background-color 0.2s;
   }
 
   #board > *:empty {
     background: var(--dead-cell-color);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #board > * {
+      transition-duration: 0ms;
+    }
   }
 
   #next a {
