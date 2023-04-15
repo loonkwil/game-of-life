@@ -1,6 +1,8 @@
 import { redirect } from '@sveltejs/kit';
 import { fromString } from '$lib/game';
 
+export const prerender = true;
+
 /** @type {import('./$types').PageLoad} */
 export function load() {
   const exampleGame = fromString(`
