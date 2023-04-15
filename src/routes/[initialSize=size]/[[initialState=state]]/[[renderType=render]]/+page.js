@@ -1,3 +1,7 @@
+import { error } from '@sveltejs/kit';
+
+const sizeLimit = 64;
+
 /**
  * @param {string} size
  * @returns {Array<number>}
@@ -26,6 +30,10 @@ function parseRenderType(render) {
 /** @type {import('./$types').PageLoad} */
 export function load({ params: { initialSize, initialState, renderType } }) {
   const [cols, rows] = parseSize(initialSize);
+  if (cols > sizeLimit || rows > sizeLimit) {
+    throw error(400, 'Bad Request');
+  }
+
   const state = parseState(initialState);
   const preferSSR = parseRenderType(renderType) === 'ssr';
   return {
