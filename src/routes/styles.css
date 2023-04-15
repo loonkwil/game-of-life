@@ -6,6 +6,7 @@
   --white: #fff;
   --gray: #f2f2f2;
   --dark-gray: #222;
+  --black: #151515;
 
   --background: var(--gray);
   --text-color: var(--dark-gray);
@@ -30,4 +31,14 @@ html {
 .clickable:hover {
   box-shadow: none;
   translate: 1px 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-gray);
+    --text-color: var(--gray);
+    --border-color: var(--gray);
+    --button-bg-color: var(--black);
+    --dead-cell-color: var(--black);
+  }
 }
