@@ -1,5 +1,33 @@
 @import '@fontsource/nunito';
 
+:root {
+  --yellow: #f1e400;
+  --green: #53ffa3;
+  --white: #fff;
+  --gray: #f2f2f2;
+  --dark-gray: #222;
+
+  --background: var(--gray);
+  --text-color: var(--dark-gray);
+  --border-color: var(--dark-gray);
+  --button-bg-color: var(--white);
+  --live-cell-color: var(--yellow);
+  --dead-cell-color: var(--white);
+}
+
 html {
   font: 16px 'Nunito', sans-serif;
+  color: var(--text-color);
+  background: var(--background);
+}
+
+.clickable {
+  display: block;
+  border: 2px solid var(--border-color);
+  box-shadow: 1px 1px 0 var(--border-color);
+}
+
+.clickable:hover {
+  box-shadow: none;
+  translate: 1px 1px;
 }
