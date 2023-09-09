@@ -10,9 +10,7 @@
   $: sveltekitReloadAttr = preferSSR ? '' : null;
 
   /**
-   * @param {import('$lib/game').Game} game
-   * @param {boolean=} ssr
-   * @returns {string}
+   * @type {function(import('$lib/game').GameRepresentation, boolean=): string}
    */
   $: generateURL = (game, ssr = preferSSR) => `/${game}${ssr ? '/ssr' : ''}`;
 </script>
