@@ -8,7 +8,8 @@ const sizeLimit = 64;
  */
 function parseSize(size) {
   const matches = size.match(/(?<cols>\d+)x(?<rows>\d+)/i);
-  return [parseInt(matches.groups.cols, 10), parseInt(matches.groups.rows, 10)];
+  const { cols, rows } = matches?.groups ?? {};
+  return [parseInt(cols, 10), parseInt(rows, 10)];
 }
 
 /**
@@ -30,7 +31,7 @@ function parseRenderType(render) {
 /** @type {import('./$types').PageLoad} */
 export function load({ params: { initialSize, initialState, renderType } }) {
   const [cols, rows] = parseSize(initialSize);
-  if (cols > sizeLimit || rows > sizeLimit) {
+  if (Number.isNaN(cols) || cols > sizeLimit || Number.isNaN(rows) || rows > sizeLimit) {
     throw error(400, 'Bad Request');
   }
 
