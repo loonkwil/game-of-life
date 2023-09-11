@@ -4,11 +4,11 @@
   const message = `${$page.status} ${$page.error?.message ?? 'Something went wrong'}`;
 </script>
 
-<h2>(._. )</h2>
+<div aria-hidden="true">(._. )</div>
 <p>{message}</p>
 
 <style>
-  h2 {
+  div {
     font-weight: normal;
     font-size: 6rem;
     margin-bottom: 0;
