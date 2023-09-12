@@ -5,7 +5,7 @@ describe('range', () => {
     expect(range(1, 2)).toEqual([1]);
   });
 
-  test('it should work with negativ numbers', () => {
+  test('it should work with negative numbers', () => {
     expect(range(-1, 2)).toEqual([-1, 0, 1]);
   });
 
